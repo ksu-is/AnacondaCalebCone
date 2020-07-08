@@ -1,17 +1,19 @@
 # Road Map
-    I. Evaluate Game's Source Code
-        
+    I. Evaluate Game's Source Code ✓
+        - Able to identify and edit colors of game elements
+        - Able to identify and edit speed of game
+        - Able to identify and edit color, size, and placement of buttons
     II. Plan Additions to Game
     
     III. Implement Additions to Game
     
   
 # Order of Tasks
-1) Create repository
-2) Write ReadMe
-3) Edit source code to identify how it works
-4) Identify key components of code features (i.e. background color, skill levels, ect.)
-5) Research alternatives to current features
+1) Create repository ✓
+2) Write ReadMe ✓
+3) Edit source code to identify how it works ✓
+4) Identify key components of code features (i.e. background color, skill levels, ect.) ✓
+5) Research alternatives to current features 
 6) Modify existing components
   6a) Change colors
   6b) Change skill levels
