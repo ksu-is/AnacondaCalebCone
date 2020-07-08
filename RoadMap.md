@@ -1,9 +1,9 @@
 # Road Map
-    # I. Evaluate Game's Source Code
+    I. Evaluate Game's Source Code
         
-    # II. Plan Additions to Game
+    II. Plan Additions to Game
     
-    # III. Implement Additions to Game
+    III. Implement Additions to Game
     
   
 # Order of Tasks
