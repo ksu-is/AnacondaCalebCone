@@ -1,5 +1,5 @@
-# SnakeGameCalebCone
-A Classic Game in Python.
+# AnacondaCalebCone
+A Classic Snake Game in Python.
 
 Source: https://github.com/talent-campus/snake-game
 
