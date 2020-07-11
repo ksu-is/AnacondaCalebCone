@@ -167,8 +167,8 @@ class Game():
             self.make_button((153, 300, 100, 50), 'Restart',
                              [(255, 255, 255), (150, 150, 150)],
                              action=lambda: restart())
-            #c8 Add quit button
-            self.make_button((400, 300, 100, 50), 'QUIT',
+            #c8 Add quit button so player no longer has to return to home screen
+            self.make_button((400, 300, 100, 50), 'Quit',
                              [(255, 255, 255), (150, 150, 150)],
                              action=lambda: quit())                 
             if self.hover is True:
@@ -444,7 +444,7 @@ def menu():
     m = Startmenu()
     m.mainloop()
 
-#c9 add music
+#c9 add background music
 pg.mixer.init()
 mixer.music.load('ana8bit.wav')
 mixer.music.play(-1)
