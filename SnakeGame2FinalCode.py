@@ -47,7 +47,9 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("Score: 0  High Score: 0", align="center", font=("Courier", 24, "normal"))
+##change font size and align to not block scoreboard
+pen.write("Score: 0      High Score: 0", align="right", font=("Courier", 12, "normal"))
+
 
 ## Add obstacle
 #Log 
@@ -59,6 +61,15 @@ log.penup()
 log.goto(100, 50)
 log.shapesize(200,1,1)
 
+## Add gateway
+#Gate 
+gate = turtle.Turtle()
+gate.speed(0)
+gate.shape("square")
+gate.color("yellow")
+gate.penup()
+gate.goto(100, -280)
+gate.shapesize(2,1,1)
 
 # Functions
 def go_up():
@@ -125,8 +136,31 @@ while True:
         delay = 0.1
 
         pen.clear()
-        pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal")) 
+        ## change font to be consistent display
+        pen.write("Score: {}  High Score: {}".format(score, high_score), align="right", font=("Courier", 12, "normal")) 
 
+    ##Check for a collision with the log
+    if head.xcor()<101 and head.xcor()>99 and head.ycor()>-275 and head.ycor()<290:
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        # Hide the segments
+        for segment in segments:
+            segment.goto(1000, 1000)
+        
+        # Clear the segments list
+        segments.clear()
+
+        # Reset the score
+        score = 0
+
+        # Reset the delay
+        delay = 0.1
+
+        pen.clear()
+        ##
+        pen.write("Score: {}  High Score: {}".format(score, high_score), align="right", font=("Courier", 12, "normal"))     
 
     # Check for a collision with the food
     if head.distance(food) < 20:
@@ -153,7 +187,7 @@ while True:
             high_score = score
         
         pen.clear()
-        pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal")) 
+        pen.write("Score: {}  High Score: {}".format(score, high_score), align="right", font=("Courier", 12, "normal")) 
 
     # Move the end segments first in reverse order
     for index in range(len(segments)-1, 0, -1):
@@ -191,7 +225,7 @@ while True:
         
             # Update the score display
             pen.clear()
-            pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
+            pen.write("Score: {}  High Score: {}".format(score, high_score), align="right", font=("Courier", 12, "normal"))
 
     time.sleep(delay)
 
