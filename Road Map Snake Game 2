@@ -1,8 +1,19 @@
 # Road Map - Snake Game 2
-    I.
-    II. Evaluate Game's Source Code ✓
-        - A
-    III. Plan Additions to Game 
+    I. Research and find correct source code
+        - Research maze games in python and snake games in python
+        - Research collisions in those games
+        - Find and select snake game with simple collision definitions
+    II. Run code/play game to evaluate source code ✓
+        - Run through the game to determine its rules
+        - Identify key elements/objects in the game
+        - Identify sections of source code responsible for objects and rules
+    III. Plan additions to game 
+        - Add an obstacle on game surface
+        - Add "door" for player to enter through obstacle safely
+        - Add additional features as necessary
     IV. Implement Additions to Game 
-        - A
-    V. 
+        - Make obstacle appear on screen
+        - Make obstacal lethal for player to collide with
+        - Make safe "door" object on obstacle for player to pass over
+        - 
+    V. Rerun code/replay game to evaluate changes and make additions
