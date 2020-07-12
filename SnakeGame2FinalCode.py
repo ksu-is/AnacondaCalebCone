@@ -1,6 +1,6 @@
   
 # Simple Snake Game in Python 3 for Beginners
-# By @TokyoEdTech
+# Edited by Caleb Cone
 
 import turtle
 import time
@@ -126,7 +126,12 @@ wn.onkeypress(go_right, "d")
 # Main game loop
 while True:
     wn.update()
-
+    ## Check if winner
+    ## score check
+    if score > 500:
+        pen.goto(0, 240)
+        pen.write(" \n WINNER!!!", align="center", font=("Courier", 36, "normal"))
+        
     # Check for a collision with the border
     if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290:
         time.sleep(1)
