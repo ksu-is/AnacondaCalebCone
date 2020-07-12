@@ -14,7 +14,8 @@ high_score = 0
 
 # Set up the screen
 wn = turtle.Screen()
-wn.title("Snake Game by @TokyoEdTech")
+##change title
+wn.title("Snake Obstacle Game")
 wn.bgcolor("green")
 wn.setup(width=600, height=600)
 wn.tracer(0) # Turns off the screen updates
@@ -47,6 +48,17 @@ pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
 pen.write("Score: 0  High Score: 0", align="center", font=("Courier", 24, "normal"))
+
+## Add obstacle
+#Log 
+log = turtle.Turtle()
+log.speed(0)
+log.shape("square")
+log.color("brown")
+log.penup()
+log.goto(100, 50)
+log.shapesize(200,1,1)
+
 
 # Functions
 def go_up():
