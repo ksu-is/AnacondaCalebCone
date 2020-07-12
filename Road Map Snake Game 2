@@ -1,19 +1,28 @@
 # Road Map - Snake Game 2
-    I. Research and find correct source code
-        - Research maze games in python and snake games in python
-        - Research collisions in those games
-        - Find and select snake game with simple collision definitions
-    II. Run code/play game to evaluate source code ✓
-        - Run through the game to determine its rules
-        - Identify key elements/objects in the game
-        - Identify sections of source code responsible for objects and rules
-    III. Plan additions to game 
-        - Add an obstacle on game surface
-        - Add "door" for player to enter through obstacle safely
-        - Add additional features as necessary
-    IV. Implement Additions to Game 
-        - Make obstacle appear on screen
-        - Make obstacal lethal for player to collide with
-        - Make safe "door" object on obstacle for player to pass over
-        - 
-    V. Rerun code/replay game to evaluate changes and make additions
+    I. Research and find correct source code ✓
+        - Research maze games in python and snake games in python ✓
+        - Research collisions in those games ✓
+        - Find and select snake game with simple collision definitions ✓
+    II. Run code/play game to evaluate source code ✓ 
+        - Run through the game to determine its rules ✓
+        - Identify key elements/objects in the game ✓
+        - Identify sections of source code responsible for objects and rules ✓
+    III. Plan additions to game  ✓
+        - Add an obstacle on game surface ✓
+        - Add "door" for player to enter through obstacle safely ✓
+        - Add additional features as necessary  ✓
+    IV. Implement Additions to Game  ✓
+        - Make obstacle appear on screen  ✓
+        - Make obstacal lethal for player to collide with  ✓
+        - Make safe "door" object on obstacle for player to pass over  ✓
+    V. Rerun code/replay game to evaluate changes and make additions  ✓
+        - Change "food" object  ✓
+            1) Make sure "food" does not generate no on obstacle  ✓
+            2) Create a second "food" so that each food appears on either side of obstacle  ✓
+            3) Make food 1 to add different size to player than food 2  ✓
+            4) Make foods give different scores  ✓
+            5) Make foods increase speed differently  ✓
+        - Modify scoreboard to reflect changes and fit on screen  ✓
+        - Create a score where player "wins"  ✓
+        - Present "WINNER" to player when score reached  ✓
+        
