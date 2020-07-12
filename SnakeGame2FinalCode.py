@@ -180,10 +180,12 @@ while True:
 
     # Check for a collision with the food
     if head.distance(food) < 20:
+        ##Change food range
         # Move the food to a random spot
-        x = random.randint(-290, 290)
+        x = random.randint(-290, 90)
         y = random.randint(-290, 290)
         food.goto(x,y)
+       
 
         # Add a segment
         new_segment = turtle.Turtle()
