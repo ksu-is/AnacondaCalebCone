@@ -39,6 +39,17 @@ food.goto(0,100)
 
 segments = []
 
+## Add second eatable character
+# Hamster
+food2 = turtle.Turtle()
+food2.speed(0)
+food2.shape("circle")
+food2.color("blue")
+food2.penup()
+food2.goto(0,100) 
+
+segments = []
+
 # Pen
 pen = turtle.Turtle()
 pen.speed(0)
@@ -176,12 +187,20 @@ while True:
         new_segment.color("grey")
         new_segment.penup()
         segments.append(new_segment)
+        ## Add a double segment
+        new_segment2 = turtle.Turtle()
+        new_segment2.speed(0)
+        new_segment2.shape("square")
+        new_segment2.color("grey")
+        new_segment2.penup()
+        segments.append(new_segment2)
 
+        ##make it move faster
         # Shorten the delay
-        delay -= 0.001
+        delay -= 0.0033
 
-        # Increase the score
-        score += 10
+        ## Increase the score
+        score += 3
 
         if score > high_score:
             high_score = score
@@ -189,6 +208,35 @@ while True:
         pen.clear()
         pen.write("Score: {}  High Score: {}".format(score, high_score), align="right", font=("Courier", 12, "normal")) 
 
+    ##Check for collision with second food 
+    if head.distance(food2) < 20:
+        # Move the food to a random spot
+        x = random.randint(110, 290)
+        y = random.randint(-290, 290)
+        food2.goto(x,y)
+
+        # Add a segment
+        new_segment = turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("grey")
+        new_segment.penup()
+        segments.append(new_segment)
+       
+        # Shorten the delay
+        delay -= 0.001
+
+        ## Add double score
+        # Increase the score
+        score += 2
+
+        if score > high_score:
+            high_score = score
+        
+        pen.clear()
+        ##
+        pen.write("Score: {}  High Score: {}".format(score, high_score), align="right", font=("Courier", 12, "normal")) 
+        
     # Move the end segments first in reverse order
     for index in range(len(segments)-1, 0, -1):
         x = segments[index-1].xcor()
